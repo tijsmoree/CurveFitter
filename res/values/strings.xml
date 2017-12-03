@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Curve Fitter</string>
+    <string name="action_settings">Settings</string>
+    <string name="x">get X</string>
+    <string name="y">get Y</string>
+    <string name="linear">linear</string>
+    <string name="parabolic">parabolic</string>
+    <string name="exponential">exponential</string>
+    <string name="logarithmic">logarithmic</string>
+    <string name="bestcurve">best fitting curve</string>
+    <string name="plusTV">+</string>
+    <string name="resetTV">o</string>
+    <string name="whichFunction">Line</string>
+    <string name="functionParams">y = ax + b</string>
+    <string name="avgDist">1</string>
+    <string name="goBack">go back</string>
+    <string name="graph">Graph of the Curve</string>
+
+    <color name="darkGreen">#005402</color>
+    <color name="white">#ffffff</color>
+    <color name="lightGreen">#8cb28d</color>
+    <color name="lighterGreen">#0a980d</color>
+
+    <string name="title_activity_result">Result</string>
+    <string name="title_activity_calculate">Calculate</string>
+    <string name="title_activity_parameter">Parameters</string>
+
+</resources>

@@ -1,0 +1,169 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGreen" >
+
+	<LinearLayout
+	    android:id="@+id/main_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:padding="10dp" >
+		
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:baselineAligned="false"
+	        android:orientation="horizontal" >
+			    
+            <EditText
+                android:id="@+id/xCoordFirst"
+                style="@style/xFields"
+		        android:layout_width="0dp"
+		        android:layout_weight="3"
+                android:nextFocusForward="@+id/yCoordFirst" >
+		
+		        <requestFocus />
+		    </EditText>
+		    
+	        <ImageButton
+	            android:id="@+id/resetCoords"
+	            style="@style/buttons"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:gravity="center"
+	            android:onClick="reset"
+	            android:padding="15dp"
+	            android:src="@drawable/reset"
+	            android:contentDescription="@string/resetTV"
+	            android:textSize="28sp" />
+		        
+	        <EditText
+	            android:id="@+id/yCoordFirst"
+	            style="@style/yFields"
+		        android:layout_width="0dp"
+		        android:layout_weight="3"
+	            android:nextFocusForward="@+id/xCoordLast" />
+		
+	    </LinearLayout>
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:baselineAligned="false"
+	        android:orientation="horizontal" >
+		    
+	        <LinearLayout
+	            android:id="@+id/listX"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.5"
+	            android:orientation="vertical" />
+	        
+	        <LinearLayout
+	            android:id="@+id/listY"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.5"
+	            android:orientation="vertical" />
+	        
+	    </LinearLayout>
+		
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:baselineAligned="false"
+	        android:orientation="horizontal" >
+			
+		    <EditText
+		        android:id="@+id/xCoordLast"
+		        style="@style/xFields"
+		        android:layout_width="0dp"
+		        android:layout_weight="3"
+		        android:nextFocusForward="@+id/yCoordLast" />
+	        
+	        <ImageButton
+	            android:id="@+id/addMoreCoords"
+	            style="@style/buttons"
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:gravity="center"
+	            android:onClick="addXY"
+	            android:padding="15dp"
+	            android:src="@drawable/add"
+	            android:contentDescription="@string/plusTV"
+	            android:textSize="28sp" />
+			
+		    <EditText
+		        android:id="@+id/yCoordLast"
+		        style="@style/yFields"
+		        android:layout_width="0dp"
+		        android:layout_weight="3"
+		        android:imeOptions="actionDone" />
+		
+	    </LinearLayout>
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:baselineAligned="false"
+	        android:orientation="horizontal" >
+	        
+	        <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="0.5"
+	            android:orientation="vertical" >
+	        
+		        <Button
+		            android:id="@+id/btnLinear"
+		            style="@style/buttons"
+		            android:drawableRight="@drawable/lin"
+		            android:gravity="center_vertical|center_horizontal|right"
+		            android:onClick="calcCurve"
+		            android:text="@string/linear" />
+        
+		        <Button
+			        android:id="@+id/btnExponential"
+			        style="@style/buttons"
+			        android:drawableRight="@drawable/exp"
+			        android:gravity="center_vertical|center_horizontal|right"
+		            android:onClick="calcCurve"
+			        android:text="@string/exponential" />
+			</LinearLayout>
+	
+	    	<LinearLayout
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_weight="0.5"
+	    	    android:orientation="vertical" >
+			
+			    <Button
+			        android:id="@+id/btnParabolic"
+			        style="@style/buttons"
+			        android:clickable="false"
+			        android:drawableLeft="@drawable/par"
+			        android:gravity="center_vertical|center_horizontal|left"
+			        android:onClick="calcCurve"
+			        android:text="@string/parabolic"
+			        android:textColor="@color/lightGreen" />
+		
+			    <Button
+			        android:id="@+id/btnLogarithmic"
+			        style="@style/buttons"
+			        android:drawableLeft="@drawable/log"
+			        android:gravity="center_vertical|center_horizontal|left"
+			        android:onClick="calcCurve"
+			        android:text="@string/logarithmic" />
+
+		</LinearLayout>
+	</LinearLayout>
+	
+	    <Button
+	        android:id="@+id/btnBestCurve"
+			style="@style/buttons"
+	        android:drawableLeft="@drawable/lin_par"
+	        android:drawableRight="@drawable/exp_log"
+		            android:onClick="calcCurve"
+	        android:text="@string/bestcurve" />
+	</LinearLayout>
+</ScrollView>

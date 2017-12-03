@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/darkGreen"
+	android:padding="10dp" >
+    
+   	<Button 
+   	    android:id="@+id/funcParams"
+   	    style="@style/buttons"
+   	    android:text="@+string/functionParams"
+   	    android:onClick="showParams" />
+   
+   	<com.moreedejonge.curvefitter.GraphView
+   	    android:id="@+id/graph"
+   	    style="@style/textView"
+   	    android:layout_height="0dp"
+   	    android:layout_weight="1"
+   	    android:contentDescription="@+string/graph" />
+   	
+   	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+   	    
+   	    <EditText
+	        android:id="@+id/getYField"
+	        style="@style/textFields"
+	        android:layout_width="0dp"
+	        android:drawableRight="@drawable/x"
+	        android:layout_weight="20"
+	        android:imeOptions="actionDone" />
+        
+        <Button
+            android:id="@+id/getY"
+            style="@style/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="getXorY"
+            android:padding="5dp"
+	        android:layout_weight="1"
+            android:text="@string/y" />
+	</LinearLayout>
+	
+   	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+   	    
+   	    <EditText
+	        android:id="@+id/getXField"
+	        style="@style/textFields"
+	        android:drawableRight="@drawable/y"
+	        android:layout_width="0dp"
+	        android:layout_weight="20"
+	        android:imeOptions="actionDone" />
+        
+        <Button
+            android:id="@+id/getX"
+            style="@style/buttons"
+	        android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="getXorY"
+            android:padding="5dp"
+            android:text="@string/x" />
+	</LinearLayout>
+</LinearLayout>

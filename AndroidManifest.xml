@@ -1,0 +1,60 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moreedejonge.curvefitter"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:allowBackup="true" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.moreedejonge.curvefitter.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+	        android:name="com.moreedejonge.curvefitter.ResultActivity"
+	        android:label="@string/title_activity_result" >
+            <intent-filter>
+		        <action android:name="android.intent.action.VIEW" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		    <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="com.moreedejonge.curvefitter.MainActivity" />
+    	</activity>
+    	<activity
+	        android:name="com.moreedejonge.curvefitter.CalculateActivity"
+	        android:label="@string/title_activity_calculate" >
+            <intent-filter>
+		        <action android:name="android.intent.action.VIEW" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		    <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="com.moreedejonge.curvefitter.ResultActivity" />
+    	</activity>
+    	<activity
+	        android:name="com.moreedejonge.curvefitter.ParameterActivity"
+	        android:label="@string/title_activity_parameter" >
+            <intent-filter>
+		        <action android:name="android.intent.action.VIEW" />
+		        <category android:name="android.intent.category.DEFAULT" />
+		    </intent-filter>
+		    <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="com.moreedejonge.curvefitter.ResultActivity" />
+    	</activity>
+    </application>
+</manifest>

@@ -1,0 +1,62 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="android:actionBarStyle">@style/AppTheme.MyActionBarTheme</item>
+    </style>
+    
+    <style name="AppTheme.MyActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar">
+	    <item name="android:titleTextStyle">@style/AppTheme.MyActionBarTheme.TitleTextStyle</item>
+        <item name="android:background">@color/lighterGreen</item>
+    </style>
+
+  	<style name="AppTheme.MyActionBarTheme.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textStyle">bold</item>
+	</style>
+	
+	<style name="textFields" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/custom_box</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:ems">10</item>
+		<item name="android:inputType">numberSigned|numberDecimal</item>
+		<item name="android:minEms">5</item>
+		<item name="android:textColor">@color/darkGreen</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:imeOptions">actionNext</item>
+    </style>
+    
+    <style name="xFields" parent="textFields">
+        <item name="android:drawableRight">@drawable/x</item>
+    </style>
+    
+    <style name="yFields" parent="textFields">
+        <item name="android:drawableLeft">@drawable/y</item>
+    </style>
+    
+    <style name="buttons">
+        <item name="android:background">@drawable/custom_box</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">5dp</item>
+		<item name="android:textColor">@color/darkGreen</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="textView">
+        <item name="android:background">@drawable/box_white</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">5dp</item>
+		<item name="android:textColor">@color/darkGreen</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:gravity">center</item>
+    </style>
+
+</resources>
